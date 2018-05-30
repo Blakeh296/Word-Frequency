@@ -18,11 +18,28 @@ namespace WordFrequency
             InitializeComponent();
         }
 
+        string filePath;
+
         private void button1_Click(object sender, EventArgs e)
         {
+            OpenFileDialog open = new OpenFileDialog();
+            string path = "Desktop";
+            open.Filter = "CSV Files| *.csv| Text Files (*.txt)| *.txt| All Files (*.*)|*.*";
+            open.Title = "Select a file to continue";
+            open.InitialDirectory = path;
+            open.CheckFileExists = true;
+            open.CheckPathExists = true;
+
             // Create some variables
             int characterCount, wordsCount = 0;
 
+            if (open.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                textBox1.Text = open.FileName;
+                filePath = textBox1.Text;
+            }
+
+            /*
             // Get and set the file path from the text box
             string filePath = textBox1.Text;
            
@@ -31,8 +48,9 @@ namespace WordFrequency
 
             // Insert the saved file path into the stream reader to open
             sr = File.OpenText(filePath);
-
+            */
 
         }
+
     }
 }

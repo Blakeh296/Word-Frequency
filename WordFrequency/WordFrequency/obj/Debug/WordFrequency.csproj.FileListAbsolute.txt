@@ -1,0 +1,10 @@
+G:\C#\Word-Frequency\WordFrequency\WordFrequency\bin\Debug\WordFrequency.exe.config
+G:\C#\Word-Frequency\WordFrequency\WordFrequency\bin\Debug\WordFrequency.exe
+G:\C#\Word-Frequency\WordFrequency\WordFrequency\bin\Debug\WordFrequency.pdb
+G:\C#\Word-Frequency\WordFrequency\WordFrequency\obj\Debug\WordFrequency.csprojResolveAssemblyReference.cache
+G:\C#\Word-Frequency\WordFrequency\WordFrequency\obj\Debug\WordFrequency.MainForm.resources
+G:\C#\Word-Frequency\WordFrequency\WordFrequency\obj\Debug\WordFrequency.Properties.Resources.resources
+G:\C#\Word-Frequency\WordFrequency\WordFrequency\obj\Debug\WordFrequency.csproj.GenerateResource.Cache
+G:\C#\Word-Frequency\WordFrequency\WordFrequency\obj\Debug\WordFrequency.csproj.CoreCompileInputs.cache
+G:\C#\Word-Frequency\WordFrequency\WordFrequency\obj\Debug\WordFrequency.exe
+G:\C#\Word-Frequency\WordFrequency\WordFrequency\obj\Debug\WordFrequency.pdb
