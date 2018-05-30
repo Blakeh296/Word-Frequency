@@ -18,37 +18,50 @@ namespace WordFrequency
             InitializeComponent();
         }
 
-        string filePath;
+        string filePath = "";
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            string path = "Desktop";
+            DataTable gridView = new DataTable();      // Create the data table 
+           
+            OpenFileDialog open = new OpenFileDialog();     // Create the dialog box
+           
+            StreamReader sr;        // Declare a new streamReader
+
+            string path = "Desktop";        // Declare a string, to tell the Dialog box where to open
+
+            int counter = 0;        // Counter for the While loop
+
+            // Limit the file types that the Dialog box can select from
             open.Filter = "CSV Files| *.csv| Text Files (*.txt)| *.txt| All Files (*.*)|*.*";
-            open.Title = "Select a file to continue";
-            open.InitialDirectory = path;
-            open.CheckFileExists = true;
-            open.CheckPathExists = true;
+
+            open.Title = "Select a file to continue";     // Text that will display at the top of the Dialog box
+            open.InitialDirectory = path;       // tell the dialog box where to open from the variable set above
+            open.CheckFileExists = true;        // Makes sure the file exists
+            open.CheckPathExists = true;        // Makes sure the path exists
 
             // Create some variables
             int characterCount, wordsCount = 0;
 
             if (open.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
+                // Display the file path 
                 textBox1.Text = open.FileName;
+                // Save the file path from out NameSpace variable
                 filePath = textBox1.Text;
             }
+            
+            sr = File.OpenText(filePath);       // Set the StreamReader now that you have the file path
 
-            /*
-            // Get and set the file path from the text box
-            string filePath = textBox1.Text;
-           
-            // Declare a new streamReader
-            StreamReader sr;
+            string delim = ",";     // Create a delimiter
 
-            // Insert the saved file path into the stream reader to open
-            sr = File.OpenText(filePath);
-            */
+            // An array and string variable for use in the while loop
+            string[] fields = null;
+            string line = null;
+            
+            // Create the columns for the DataGrid
+            gridView.Columns.Add(new DataColumn("Word", typeof(string)));
+            gridView.Columns.Add(new DataColumn("Count", typeof(string)));
 
         }
 
