@@ -7,14 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WordFrequency
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Create some variables
+            int characterCount, wordsCount = 0;
+
+            // Get and set the file path from the text box
+            string filePath = textBox1.Text;
+           
+            // Declare a new streamReader
+            StreamReader sr;
+
+            // Insert the saved file path into the stream reader to open
+            sr = File.OpenText(filePath);
+
+
         }
     }
 }
