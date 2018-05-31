@@ -80,9 +80,11 @@
             this.tbOutPut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbOutPut.Location = new System.Drawing.Point(12, 255);
             this.tbOutPut.Name = "tbOutPut";
+            this.tbOutPut.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.tbOutPut.Size = new System.Drawing.Size(426, 186);
             this.tbOutPut.TabIndex = 5;
             this.tbOutPut.Text = "";
+            this.tbOutPut.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.tbOutPut_MouseDoubleClick);
             // 
             // MainForm
             // 

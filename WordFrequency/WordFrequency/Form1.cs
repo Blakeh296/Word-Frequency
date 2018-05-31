@@ -49,9 +49,10 @@ namespace WordFrequency
 
             try
             {
+                tbOutPut.Text = " ";
+
                 // Limit the file types that the Dialog box can select from
                 open.Filter = "CSV Files| *.csv| Text Files (*.txt)| *.txt| All Files (*.*)|*.*";
-
                 open.Title = "Select a file to continue";     // Text that will display at the top of the Dialog box
                 open.InitialDirectory = path;       // tell the dialog box where to open from the variable set above
                 open.CheckFileExists = true;        // Makes sure the file exists
@@ -97,5 +98,11 @@ namespace WordFrequency
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void tbOutPut_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            tbOutPut.Text = " ";
+        }
+
     }
 }
